@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Greetings Website</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Send Greetings to your loved Ones</h1>
+    <div class="greetings">
+      <button class="btn" onclick="showPopup('Christmas')">Christmas Greeting</button>
+      <button class="btn" onclick="showPopup('New Year')">New Year Greeting</button>
+      <button class="btn" onclick="showPopup('Pongal')">Pongal Greeting</button>
+    </div>
+  </div>
+
+  <div id="popup" class="popup">
+    <div class="popup-content">
+      <span class="close-btn" onclick="closePopup()">&times;</span>
+      <h2 id="popup-title"></h2>
+      <p id="popup-message"></p>
+      <form id="emailForm" onsubmit="sendGreeting(event)">
+        <input type="email" id="email" placeholder="Enter recipient's email" required>
+        <textarea id="description" placeholder="Enter your custom message here" required></textarea>
+        <label for="image">Upload Greeting Card:</label>
+        <input type="hidden" id="selectedImage" name="selectedImage" required>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
