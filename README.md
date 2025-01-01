@@ -82,26 +82,6 @@ Access the frontend by opening `index.html` in your browser or by serving it wit
 
 ---
 
-## Project Structure
-```plaintext
-project/
-├── public/
-│   ├── images/             # Greeting images
-│   ├── style.css           # Frontend styling
-├── backend/
-│   ├── routes/
-│   │   ├── greetings.js    # Backend API routes
-│   ├── models/
-│   │   ├── Greetings.js    # MongoDB schema for greetings
-│   ├── server.js           # Main server file
-├── index.html              # Main frontend page
-├── script.js               # Frontend logic
-├── README.md               # Project documentation
-├── .env                    # Environment variables
-```
-
----
-
 ## Troubleshooting
 
 ### MongoDB Connection Issues
