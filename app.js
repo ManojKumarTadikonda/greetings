@@ -1,8 +1,11 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
+const multer = require('multer');
 const cors = require('cors');
 const greetingRoutes = require('./routes/greetings');
+const fs = require('fs');
+const path = require('path');
 
 // Initialize the app
 const app = express();
@@ -10,6 +13,8 @@ const app = express();
 // Middleware
 app.use(bodyParser.json());
 app.use(cors());
+app.use(bodyParser.urlencoded({ extended: true }));
+app.use('/images', express.static(path.join(__dirname, 'images')));
 
 // MongoDB connection
 mongoose

@@ -8,24 +8,26 @@
 </head>
 <body>
   <div class="container">
-    <h1>Send Greetings to your loved Ones</h1>
+    <h1 class="title">Send Greetings to Your Loved Ones</h1>
     <div class="greetings">
-      <button class="btn" onclick="showPopup('Christmas')">Christmas Greeting</button>
-      <button class="btn" onclick="showPopup('New Year')">New Year Greeting</button>
-      <button class="btn" onclick="showPopup('Pongal')">Pongal Greeting</button>
+      <button class="btn christmas-btn" onclick="showPopup('Christmas')">🎄 Christmas Greeting</button>
+      <button class="btn newyear-btn" onclick="showPopup('New Year')">🎉 New Year Greeting</button>
+      <button class="btn pongal-btn" onclick="showPopup('Pongal')">🌾 Pongal Greeting</button>
     </div>
   </div>
 
+  <!-- Popup -->
   <div id="popup" class="popup">
     <div class="popup-content">
       <span class="close-btn" onclick="closePopup()">&times;</span>
       <h2 id="popup-title"></h2>
       <p id="popup-message"></p>
-      <form id="emailForm" onsubmit="sendGreeting(event)">
+      <div id="image-selection" class="image-selection"></div>
+      <form id="emailForm" enctype="multipart/form-data" onsubmit="sendGreeting(event)">
         <input type="email" id="email" placeholder="Enter recipient's email" required>
         <textarea id="description" placeholder="Enter your custom message here" required></textarea>
-        <label for="image">Upload Greeting Card:</label>
         <input type="hidden" id="selectedImage" name="selectedImage" required>
+        <button type="submit" class="send-btn">Send Greeting</button>
       </form>
     </div>
   </div>
