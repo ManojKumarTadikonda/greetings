@@ -25,7 +25,7 @@ router.post('/send', async (req, res) => {
   try {
     // Send email using nodemailer
     const mailOptions = {
-      from: 'manojtadikonda5@gmail.com',
+      from: 'Your email',
       to: recipientEmail,
       subject: `${greetingType} Greetings!`,
       text: customMessage,
